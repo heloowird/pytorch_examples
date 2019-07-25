@@ -22,9 +22,9 @@ device = torch.device("cuda" if use_cuda else "cpu")
 start_tag = "<START>"
 stop_tag = "<STOP>"
 unknown_word = "<UNK>"
-max_length = 80
+max_length = 256
 batch_size = 32
-epoch_num = 20
+epoch_num = 50
 pad = True
 
 # Model super parameters
@@ -44,13 +44,13 @@ tag_dict_file = "output/tag_dict"
 # Load training and testing data
 train_helper = DataHelper('train', train_file, batch_size, max_length, start_tag, stop_tag, unknown_word, pad)
 
-word_to_ix = train_helper.get_word2id()
-tag_to_ix = train_helper.get_tag2id()
-save_dict(word_to_ix, word_dict_file)
-save_dict(tag_to_ix, tag_dict_file)
+#word_to_ix = train_helper.get_word2id()
+#tag_to_ix = train_helper.get_tag2id()
+#save_dict(word_to_ix, word_dict_file)
+#save_dict(tag_to_ix, tag_dict_file)
 
-#word_to_ix = load_dict(word_dict_file)
-#tag_to_ix = load_dict(tag_dict_file)
+word_to_ix = load_dict(word_dict_file)
+tag_to_ix = load_dict(tag_dict_file)
 
 test_helper = DataHelper('test', test_file, batch_size, max_length, start_tag, stop_tag, unknown_word, pad)
 
