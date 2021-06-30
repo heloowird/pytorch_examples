@@ -1,3 +1,0 @@
-[submodule "rnn_transducer/warp-transducer"]
-	path = rnn_transducer/warp-transducer
-	url = https://github.com/HawkAaron/warp-transducer.git
