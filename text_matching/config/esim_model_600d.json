@@ -1,0 +1,19 @@
+{
+    "model_name": "esim",
+    "train_data": "../user_data/train_data/train_data.txt",
+    "valid_data": "../user_data/train_data/valid_data.txt",
+                 
+    "embeddings": "../user_data/model/word2vec/word2vec.sg.600.bin",
+
+    "target_dir": "../user_data/model/esim_model_600d",
+    
+    "hidden_size": 300,
+    "dropout": 0.15,
+    "num_classes": 2,
+
+    "epochs": 64,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "patience": 50,
+    "max_gradient_norm": 6.0
+}
