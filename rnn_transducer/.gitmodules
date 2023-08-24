@@ -1,4 +1,0 @@
-[submodule "warp-transducer"]
-	path = warp-transducer
-	url = https://github.com/HawkAaron/warp-transducer.git
-	ignore = untracked
